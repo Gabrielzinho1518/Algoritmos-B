@@ -1,0 +1,132 @@
+/******************************************************************************
+Aula 18/11/2025:
+*******************************************************************************/
+/*
+#include <stdio.h>
+
+struct aluno {
+    char nome[80];
+    char curso[60];
+    int anoIngresso;
+    int anoFormatura;
+};
+
+void lerAluno(struct aluno *p){
+    printf("Nome");
+    gets(p->nome);
+    printf("Curso;");
+    fflush(stdin);
+    gets(p->curso);
+    printf("Ano de ingresso:");
+    scanf("%d", &p->anoIngresso);
+    printf("Previsão de formatura em:");
+    scanf("%d", &p->anoFormatura);
+    return;
+}
+
+int main(){
+    struct aluno a[3];
+    int i;
+    
+    for(i=0; i<3; i++){
+        lerAluno(&a[i]);
+    }
+    
+    for(i=0; i<3; i++){
+        printf("----------------------------------\n");
+        printf("Nome: %s\n", a[i].nome);
+        printf("Curso: %s\n", a[i].curso);
+        printf("Ano de ingresso: %d\n", a[i].anoIngresso);
+        printf("Previsão de formatura: %d\n", a[i].anoFormatura);
+    }
+    
+    return 0;
+}
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct aluno {
+    char nome[80];
+    char curso[60];
+    int anoIngresso;
+    int anoFormatura;
+};
+
+void lerAluno(struct aluno *p){
+    printf("Nome: ");
+    fgets(p->nome, sizeof(p->nome), stdin);
+    p->nome[strcspn(p->nome, "\n")] = '\0';  // remove \n
+
+    printf("Curso: ");
+    fgets(p->curso, sizeof(p->curso), stdin);
+    p->curso[strcspn(p->curso, "\n")] = '\0'; // remove \n
+
+    printf("Ano de ingresso: ");
+    scanf("%d", &p->anoIngresso);
+
+    printf("Previsão de formatura: ");
+    scanf("%d", &p->anoFormatura);
+
+    getchar();  // limpa o \n deixado pelo scanf
+}
+
+int main(){
+    struct aluno *ptr;
+
+    ptr = (struct aluno *) malloc(sizeof(struct aluno));
+
+    if(!ptr){
+        printf("Problemas na alocação\n");
+        exit(1);
+    }
+
+    lerAluno(ptr);
+
+    printf("\n===== DADOS DO ALUNO =====\n");
+    printf("Nome: %s\n", ptr->nome);
+    printf("Curso: %s\n", ptr->curso);
+    printf("Ano de ingresso: %d\n", ptr->anoIngresso);
+    printf("Previsão de formatura: %d\n", ptr->anoFormatura);
+
+    free(ptr);
+
+    return 0;
+}
+*/
+//L6 
+// 12 Considere que em uma lavagem de carros, é necessário implementar um programa que controle a entrada e
+//saída de veículos. Ao chegar um veículo, são registrados a placa, o nome e telefone do proprietário, valor a ser
+//pago e a situação (pago ou não pago). Considere que são atendidos no máximo 10 veículos.
+//Desenvolva este programa usando funções para:
+//– obter os dados de um veículo
+//– registrar o pagamento da lavagem de um veículo
+//– mostrar todos os dados de um veículo
+//– calcular o valor total recebido.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct veiculos{
+  char placa[10];
+  char nome[10];
+  int telefone[11];
+  float valor;
+  char situação;
+    
+};
+
+void lerVeiculos(struct veiculos *v){
+    printf("Placa do veiculo:\n");
+    fgets(v->placa,10,stdin)
+    
+    
+}
+
+
+
+
+
+
+
